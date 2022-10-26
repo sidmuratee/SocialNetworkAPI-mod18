@@ -1,3 +1,5 @@
+const {  Types } = require('mongoose');
+
 const names = [
   'Aaran',
   'Aaren',
@@ -103,16 +105,17 @@ const getRandomName = () =>
   `${getRandomArrItem(names)} ${getRandomArrItem(names)}`;
 
 // Function to generate random assignments that we can add to student object.
-const getRandomReactions = (int) => {
+const getRandomAssignments = (int) => {
   const results = [];
   for (let i = 0; i < int; i++) {
     results.push({
-      reactionName: getRandomArrItem(appDescriptions),
+      assignmentName: getRandomArrItem(appDescriptions),
       score: Math.floor(Math.random() * (99 - 70 + 1) + 70),
+      assignmentId:  new Types.ObjectId()
     });
   }
   return results;
 };
 
 // Export the functions for use in seed.js
-module.exports = { getRandomName, getRandomReactions };
+module.exports = { getRandomName, getRandomAssignments };
