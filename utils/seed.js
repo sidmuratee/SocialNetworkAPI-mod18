@@ -13,10 +13,10 @@ connection.once('open', async () => {
   // Drop existing Users
   await User.deleteMany({});
 
-  // Create empty array to hold the students
+  // Create empty array to hold the users
   const users = [];
 
-  // Loop 20 times -- add students to the students array
+  // Loop 20 times -- add users to the users array
   for (let i = 0; i < 20; i++) {
     // Get some random assignment objects using a helper function that we imported from ./data
     const reactions = getRandomReactions(20);
@@ -34,7 +34,7 @@ connection.once('open', async () => {
     });
   }
 
-  // Add students to the collection and await the results
+  // Add users to the collection and await the results
   await User.collection.insertMany(users);
 
   // Add Thoughts to the collection and await the results

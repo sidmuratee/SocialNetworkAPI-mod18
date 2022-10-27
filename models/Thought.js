@@ -1,7 +1,8 @@
 const { Schema, model } = require("mongoose");
+const reactionSchema = require("./Reaction")
 
-// Schema to create a course model
-const courseSchema = new Schema(
+// Schema to create a thought model
+const thoughtSchema = new Schema(
   {
     thoughtText: {
       type: String,
@@ -15,8 +16,8 @@ const courseSchema = new Schema(
       type: String,
       required: true,
     },
-    reactions: [reactionSchema]
-    ,
+    reactions:[reactionSchema],
+    
    },
   {
     toJSON: {
@@ -25,7 +26,7 @@ const courseSchema = new Schema(
     id: false,
   }
 );
-userSchema.virtual('friendCount').get(function() {
+thoughtSchema.virtual('reactionCount').get(function() {
   return this.friends.length;
 });
 

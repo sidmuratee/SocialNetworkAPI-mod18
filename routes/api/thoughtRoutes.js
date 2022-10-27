@@ -7,10 +7,10 @@ const {
   deleteCourse,
 } = require('../../controllers/courseController.js');
 
-// /api/courses
+// /api/thoughts
 router.route('/').get(getCourses).post(createCourse);
 
-// /api/courses/:courseId
+// /api/thoughts/:courseId
 router
   .route('/:courseId')
   .get(getSingleCourse)
