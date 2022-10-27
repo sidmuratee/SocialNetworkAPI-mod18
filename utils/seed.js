@@ -18,7 +18,7 @@ connection.once('open', async () => {
 
   // Loop 20 times -- add users to the users array
   for (let i = 0; i < 20; i++) {
-    // Get some random assignment objects using a helper function that we imported from ./data
+    // Get some random friend objects using a helper function that we imported from ./data
     const reactions = getRandomReactions(20);
 
     const fullName = getRandomName();

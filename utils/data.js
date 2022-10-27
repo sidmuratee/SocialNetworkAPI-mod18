@@ -104,14 +104,14 @@ const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const getRandomName = () =>
   `${getRandomArrItem(names)} ${getRandomArrItem(names)}`;
 
-// Function to generate random assignments that we can add to user object.
+// Function to generate random friends that we can add to user object.
 const getRandomReactions = (int) => {
   const results = [];
   for (let i = 0; i < int; i++) {
     results.push({
-      assignmentName: getRandomArrItem(appDescriptions),
+      friendName: getRandomArrItem(appDescriptions),
       score: Math.floor(Math.random() * (99 - 70 + 1) + 70),
-      assignmentId:  new Types.ObjectId()
+      friendId:  new Types.ObjectId()
     });
   }
   return results;
