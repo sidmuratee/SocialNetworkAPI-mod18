@@ -13,12 +13,12 @@ connection.once('open', async () => {
   // Drop existing Users
   await User.deleteMany({});
 
-  // Create empty array to hold the users
+  // Create empty array to hold the students
   const users = [];
 
-  // Loop 20 times -- add users to the users array
+  // Loop 20 times -- add students to the students array
   for (let i = 0; i < 20; i++) {
-    // Get some random friend objects using a helper function that we imported from ./data
+    // Get some random assignment objects using a helper function that we imported from ./data
     const reactions = getRandomReactions(20);
 
     const fullName = getRandomName();
@@ -27,6 +27,8 @@ connection.once('open', async () => {
     const github = `${first}${Math.floor(Math.random() * (99 - 18 + 1) + 18)}`;
 
     users.push({
+      username: first + i,
+      email: first + i + "@gmail.com",
       first,
       last,
       github,
@@ -34,7 +36,7 @@ connection.once('open', async () => {
     });
   }
 
-  // Add users to the collection and await the results
+  // Add students to the collection and await the results
   await User.collection.insertMany(users);
 
   // Add Thoughts to the collection and await the results
