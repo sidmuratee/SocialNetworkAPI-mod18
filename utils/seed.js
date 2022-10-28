@@ -19,7 +19,7 @@ connection.once('open', async () => {
   // Loop 20 times -- add students to the students array
   for (let i = 0; i < 20; i++) {
     // Get some random assignment objects using a helper function that we imported from ./data
-    const reactions = getRandomReactions(20);
+    const reactions = getRandomReactions(3);
 
     const fullName = getRandomName();
     const first = fullName.split(' ')[0];
@@ -41,9 +41,9 @@ connection.once('open', async () => {
 
   // Add Thoughts to the collection and await the results
   await Thought.collection.insertOne({
-    thoughtName: 'UCLA',
-    inPerson: false,
-    users: users.map(user => user._id),
+    thoughtText: 'thinking thoughts',
+    username: "example-user",
+    reactions: [],
   });
 
   // Log out the seed data to indicate what should appear in the database

@@ -4,21 +4,20 @@ module.exports = {
   // Get all thoughts
   getThoughts(req, res) {
     Thought.find()
-    .populate("users")
+    
       .then((thoughts) => res.json(thoughts))
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => res.status(500).json(err.message));
   },
   // Get a thought
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
       .select('-__v')
-      .populate("users")
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: 'No thought with that ID' })
           : res.json(thought)
       )
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => res.status(500).json(err.message));
   },
   // Create a thought
   createThought(req, res) {

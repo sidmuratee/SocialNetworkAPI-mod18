@@ -109,8 +109,8 @@ const getRandomReactions = (int) => {
   const results = [];
   for (let i = 0; i < int; i++) {
     results.push({
-      friendName: getRandomArrItem(appDescriptions),
-      score: Math.floor(Math.random() * (99 - 70 + 1) + 70),
+      username: "randomUsername" + i,
+      reactionBody: "random reaction" + i,
       friendId:  new Types.ObjectId()
     });
   }
