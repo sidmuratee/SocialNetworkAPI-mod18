@@ -74,9 +74,9 @@ addReaction(req, res)  {
 
   deleteReaction(req, res) {
     console.log('deleting a reaction');
-    console.log(req.body);
-    User.findOneAndUpdate(
-      { _id: req.params.userId },
+    console.log(req.params.reactionId, req.params.thoughtId);
+    Thought.findOneAndUpdate(
+      { _id: req.params.thoughtId },
       { $pull: { reactions: req.params.reactionId  } },
       { runValidators: true, new: true }
     )
