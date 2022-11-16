@@ -1,35 +1,35 @@
 
-# d
+# Social Network API
     
 ## Table of Contents
 * [description](description)
+* [video](video)
 * [installation](#installation)
 * [usage](#usage)
-* [test](#test)
-* [contributors](#contributors)
 * [license](#license)
 * [contact](#contact)
     
     ## Description
-    <a href="https://drive.google.com/file/d/1zj5V_R6ysMO-uaClry_lrRGQU4C3QGi0/view" 
-    d
+    This project is the back end social media site allowing a user to have friends, create Thoughts, and have reactions to thoughts. This project allows a user to hit all end points post put delete get
+
+    ## Video
+
+    https://drive.google.com/file/d/163k885qpOwU5a-A_DxNNZXNfH7hB5m__/view
     
     ## Installation
-    dd
+    Step 1: Clone Repo
+    Step 2: Install Node.js
+    Step 3: use "npm i" to install the packages required
+    Step 4: use "npm run seed" to add seeds that are in the data already
+    Step 5: use "npm start" to connect to server Or just use "nodemon index.js" in the command line
     
     ## Usage
-    d
-    
-    ## Test
-    d
-    
-    ## Contributors
-    dd
+    If you want to use a social media platform that doesn't have a front end.
     
     ## license
     [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
     
     
     ## Contact
-    For any questions, please reach out to me at https://github.com/
-    or e-mail me at d
+    For any questions, please reach out to me at https://github.com/sidmuratee
+    
